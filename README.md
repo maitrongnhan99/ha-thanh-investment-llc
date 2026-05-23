@@ -1,4 +1,4 @@
-# Ha Thanh Investment LLC — Website
+# Ha Thanh Investment LLC - Website
 
 Marketing site for **Ha Thanh Investment LLC**, a Hemet, California business offering computer repair, POS systems, and IT services for local businesses and residents since 2020.
 
@@ -50,4 +50,4 @@ Deploy on [Vercel](https://vercel.com) or any Node host that supports Next.js. S
 
 ## License
 
-Private — © Ha Thanh Investment LLC.
+Private - © Ha Thanh Investment LLC.
