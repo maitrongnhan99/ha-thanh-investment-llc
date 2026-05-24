@@ -37,11 +37,19 @@ export function AboutHero() {
         </h1>
         <p
           className={cn(
-            'mx-auto mt-5 max-w-xl text-xl font-semibold text-white sm:text-2xl',
+            'mx-auto mt-5 max-w-2xl text-xl font-semibold text-white sm:text-2xl',
             heroSloganShadow,
           )}
         >
           {aboutContent.heroSlogan}
+        </p>
+        <p
+          className={cn(
+            'mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/95 sm:text-lg',
+            heroSloganShadow,
+          )}
+        >
+          {aboutContent.heroSloganSub}
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
           <a

@@ -39,7 +39,9 @@ export const mobileNavItems = [
 export const aboutContent = {
   heroLabel: 'Trusted local repair',
   heroTitle: 'Ha Thanh Investment',
-  heroSlogan: 'Hands-on repair for the tech you depend on',
+  heroSlogan: 'Second Life. First-Class Quality.',
+  heroSloganSub:
+    'We expert-repair, assemble, and renew pre-loved items to give them a brand-new purpose',
   heroImage: '/images/team-repair.jpg',
   heroImageAlt: 'Technicians repairing computers and devices at a workbench',
   stats: [
