@@ -40,12 +40,8 @@ export const aboutContent = {
   heroLabel: 'Trusted local repair',
   heroTitle: 'Ha Thanh Investment',
   heroSlogan: 'Hands-on repair for the tech you depend on',
-  heroSloganSub:
-    'Computers, POS systems, and IT support - here in Hemet since 2020',
   heroImage: '/images/team-repair.jpg',
   heroImageAlt: 'Technicians repairing computers and devices at a workbench',
-  heroIntro:
-    'We help local businesses and residents keep their equipment running reliably - with clear answers, fair pricing, and repairs done in-house.',
   stats: [
     {
       icon: 'calendar' as const,

@@ -6,6 +6,7 @@ import { aboutContent, siteConfig } from '@/lib/site-config';
 import { cn } from '@/lib/utils';
 
 const heroHeadingShadow = '[text-shadow:0_1px_1px_rgba(0,0,0,0.15)]';
+const heroSloganShadow = '[text-shadow:0_1px_1px_rgba(0,0,0,0.06)]';
 
 export function AboutHero() {
   return (
@@ -34,14 +35,13 @@ export function AboutHero() {
         >
           {aboutContent.heroTitle}
         </h1>
-        <p className="mt-4 text-xl font-semibold text-white sm:text-2xl">
+        <p
+          className={cn(
+            'mx-auto mt-5 max-w-xl text-xl font-semibold text-white sm:text-2xl',
+            heroSloganShadow,
+          )}
+        >
           {aboutContent.heroSlogan}
-        </p>
-        <p className="mx-auto mt-3 max-w-xl text-base text-white sm:text-lg">
-          {aboutContent.heroSloganSub}
-        </p>
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/95">
-          {aboutContent.heroIntro}
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
           <a
