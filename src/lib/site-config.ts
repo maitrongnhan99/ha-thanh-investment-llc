@@ -39,8 +39,13 @@ export const mobileNavItems = [
 export const aboutContent = {
   heroLabel: 'Trusted local repair',
   heroTitle: 'Ha Thanh Investment',
+  heroSlogan: 'Hands-on repair for the tech you depend on',
+  heroSloganSub:
+    'Computers, POS systems, and IT support - here in Hemet since 2020',
+  heroImage: '/images/team-repair.jpg',
+  heroImageAlt: 'Technicians repairing computers and devices at a workbench',
   heroIntro:
-    'Ha Thanh Investment LLC provides computer repair, POS systems, and technology services in Hemet, California. Since 2020, we have helped local businesses and residents keep their equipment running reliably.',
+    'We help local businesses and residents keep their equipment running reliably - with clear answers, fair pricing, and repairs done in-house.',
   stats: [
     {
       icon: 'calendar' as const,

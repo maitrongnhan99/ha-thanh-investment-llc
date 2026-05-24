@@ -30,6 +30,18 @@ export const metadata: Metadata = {
   // PNG sizes in public/ for browsers that prefer explicit dimensions.
   icons: {
     icon: [
+      {
+        url: '/favicon-light.png',
+        sizes: '32x32',
+        type: 'image/png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/favicon-dark.png',
+        sizes: '32x32',
+        type: 'image/png',
+        media: '(prefers-color-scheme: dark)',
+      },
       { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },
     ],
