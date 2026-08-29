@@ -4,15 +4,15 @@ export const siteConfig = {
   tagline: 'Reliable tech repair in Hemet',
   description:
     'Computer repair, POS systems, and IT services in Hemet, California. Serving customers since 2020.',
-  phone: '714-330-1736',
-  phoneHref: 'tel:+17143301736',
-  address: '40490 Vista Road, Hemet, CA 92544',
+  phone: '714-794-0974',
+  phoneHref: 'tel:+17147940974',
+  address: '1682 E 41th St, Los Angeles, CA 90011',
   addressMapsHref:
-    'https://www.google.com/maps/search/?api=1&query=40490+Vista+Road+Hemet+CA+92544',
+    'https://www.google.com/maps/search/?api=1&query=1682+E+41th+St+Los+Angeles+CA+90011',
   addressEmbedHref:
-    'https://maps.google.com/maps?q=40490+Vista+Road,+Hemet,+CA+92544&hl=en&z=15&output=embed',
+    'https://maps.google.com/maps?q=1682+E+41th+St,+Los+Angeles,+CA+90011&hl=en&z=15&output=embed',
   foundedYear: 2020,
-  location: 'Hemet, CA',
+  location: 'Los Angeles, CA',
 } as const;
 
 export const navItems = [
@@ -52,8 +52,8 @@ export const aboutContent = {
     },
     {
       icon: 'map' as const,
-      value: 'Hemet, CA',
-      label: '40490 Vista Road',
+      value: 'Los Angeles, CA',
+      label: '1682 E 41th St',
     },
     {
       icon: 'wrench' as const,
@@ -62,9 +62,9 @@ export const aboutContent = {
     },
     {
       icon: 'phone' as const,
-      value: '714-330-1736',
+      value: '714-794-0974',
       label: 'Call for a free consultation',
-      href: 'tel:+17143301736',
+      href: 'tel:+17147940974',
     },
   ],
   storyTitle: 'Why customers choose us',
@@ -80,7 +80,7 @@ export const aboutContent = {
       imageAlt:
         'Technician repairing a desktop computer at a local repair shop workbench',
       ctaLabel: 'Schedule a consultation',
-      ctaHref: 'tel:+17143301736',
+      ctaHref: 'tel:+17147940974',
     },
     {
       id: 'repair',
