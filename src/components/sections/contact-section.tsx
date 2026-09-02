@@ -32,15 +32,24 @@ export function ContactSection() {
               <li className="flex gap-4">
                 <MapPinIcon className="text-ink mt-0.5 size-5 shrink-0" />
                 <div>
-                  <p className="text-ink text-sm font-medium">Address</p>
-                  <a
-                    href={siteConfig.addressMapsHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-body mt-1 inline-block text-base hover:underline"
-                  >
-                    {siteConfig.address}
-                  </a>
+                  <p className="text-ink text-sm font-medium">Addresses</p>
+                  <ul className="mt-2 space-y-3">
+                    {siteConfig.addresses.map((location) => (
+                      <li key={location.label}>
+                        <p className="text-ink text-sm font-medium">
+                          {location.label}
+                        </p>
+                        <a
+                          href={location.mapsHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-body mt-0.5 inline-block text-base hover:underline"
+                        >
+                          {location.address}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </li>
             </ul>

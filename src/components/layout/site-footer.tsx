@@ -32,14 +32,17 @@ export function SiteFooter() {
             >
               {siteConfig.phone}
             </a>
-            <a
-              href={siteConfig.addressMapsHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-on-dark-soft hover:text-on-dark text-sm"
-            >
-              Directions
-            </a>
+            {siteConfig.addresses.map((location) => (
+              <a
+                key={location.label}
+                href={location.mapsHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-on-dark-soft hover:text-on-dark text-sm"
+              >
+                Directions ({location.label})
+              </a>
+            ))}
           </nav>
         </div>
 
@@ -50,9 +53,11 @@ export function SiteFooter() {
             © {siteConfig.name} {year}. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center gap-4">
-            <span className="text-on-dark-soft text-sm">
-              {siteConfig.address}
-            </span>
+            <div className="text-on-dark-soft flex flex-col gap-1 text-sm sm:text-right">
+              {siteConfig.addresses.map((location) => (
+                <span key={location.label}>{location.address}</span>
+              ))}
+            </div>
             <button
               type="button"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

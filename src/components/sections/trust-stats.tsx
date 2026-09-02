@@ -15,19 +15,40 @@ function StatCard({
   value,
   label,
   href,
+  addresses,
 }: {
   icon: (typeof iconMap)[keyof typeof iconMap];
-  value: string;
-  label: string;
+  value?: string;
+  label?: string;
   href?: string;
+  addresses?: typeof siteConfig.addresses;
 }) {
   const card = (
     <Card className="bg-surface-strong h-full border-0 py-0 shadow-none">
       <CardContent className="flex h-full min-h-[140px] flex-col gap-3 p-6">
         <Icon className="text-ink size-6 shrink-0 stroke-[1.5]" />
         <div className="flex flex-1 flex-col">
-          <p className="text-ink text-lg font-medium">{value}</p>
-          <p className="text-body mt-1 flex-1 text-sm leading-snug">{label}</p>
+          {addresses ? (
+            <ul className="space-y-3">
+              {addresses.map((location) => (
+                <li key={location.label}>
+                  <p className="text-ink text-sm font-medium">
+                    {location.label}
+                  </p>
+                  <p className="text-body mt-0.5 text-sm leading-snug">
+                    {location.address}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <>
+              <p className="text-ink text-lg font-medium">{value}</p>
+              <p className="text-body mt-1 flex-1 text-sm leading-snug">
+                {label}
+              </p>
+            </>
+          )}
         </div>
       </CardContent>
     </Card>
@@ -49,34 +70,42 @@ function StatCard({
 
 function CompanyLocationMap() {
   return (
-    <div className="mt-10">
-      <div className="border-border bg-card overflow-hidden rounded-xl border">
-        <div className="relative aspect-[21/9] min-h-[280px] w-full sm:min-h-[360px]">
-          <iframe
-            src={siteConfig.addressEmbedHref}
-            className="absolute inset-0 h-full w-full border-0"
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title={`Map showing ${siteConfig.name} at ${siteConfig.address}`}
-          />
+    <div className="mt-10 grid gap-8 lg:grid-cols-2">
+      {siteConfig.addresses.map((location) => (
+        <div key={location.label}>
+          <div className="border-border bg-card overflow-hidden rounded-xl border">
+            <div className="relative aspect-[21/9] min-h-[240px] w-full sm:min-h-[280px]">
+              <iframe
+                src={location.embedHref}
+                className="absolute inset-0 h-full w-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title={`Map showing ${siteConfig.name} at ${location.address}`}
+              />
+            </div>
+          </div>
+          <p className="text-body mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+            <MapPinIcon className="text-ink size-4 shrink-0" aria-hidden />
+            <span className="text-ink font-medium">{location.label}</span>
+            <span className="text-muted-soft" aria-hidden>
+              ·
+            </span>
+            <span>{location.address}</span>
+            <span className="text-muted-soft" aria-hidden>
+              ·
+            </span>
+            <a
+              href={location.mapsHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-ink font-medium hover:underline"
+            >
+              Open in Google Maps
+            </a>
+          </p>
         </div>
-      </div>
-      <p className="text-body mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
-        <MapPinIcon className="text-ink size-4 shrink-0" aria-hidden />
-        <span>{siteConfig.address}</span>
-        <span className="text-muted-soft" aria-hidden>
-          ·
-        </span>
-        <a
-          href={siteConfig.addressMapsHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-ink font-medium hover:underline"
-        >
-          Open in Google Maps
-        </a>
-      </p>
+      ))}
     </div>
   );
 }
@@ -92,14 +121,19 @@ export function TrustStats() {
           Ha Thanh Investment LLC - serving the Hemet area since 2020
         </p>
         <div className="mt-10 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {aboutContent.stats.map((stat) => {
+          {aboutContent.stats.map((stat, index) => {
             const Icon = iconMap[stat.icon];
+            const statKey =
+              'addresses' in stat
+                ? 'locations'
+                : `${stat.icon}-${'value' in stat ? stat.value : index}`;
             return (
               <StatCard
-                key={stat.value}
+                key={statKey}
                 icon={Icon}
-                value={stat.value}
-                label={stat.label}
+                value={'value' in stat ? stat.value : undefined}
+                label={'label' in stat ? stat.label : undefined}
+                addresses={'addresses' in stat ? stat.addresses : undefined}
                 href={'href' in stat ? stat.href : undefined}
               />
             );

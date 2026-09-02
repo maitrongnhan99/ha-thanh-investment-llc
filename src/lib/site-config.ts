@@ -1,18 +1,33 @@
+export const addresses = [
+  {
+    label: 'Los Angeles',
+    address: '1682 E 41th St, Los Angeles, CA 90011',
+    mapsHref:
+      'https://www.google.com/maps/search/?api=1&query=1682+E+41th+St+Los+Angeles+CA+90011',
+    embedHref:
+      'https://maps.google.com/maps?q=1682+E+41th+St,+Los+Angeles,+CA+90011&hl=en&z=15&output=embed',
+  },
+  {
+    label: 'Hemet',
+    address: '40490 Vista Road, Hemet, CA 92544',
+    mapsHref:
+      'https://www.google.com/maps/search/?api=1&query=40490+Vista+Road+Hemet+CA+92544',
+    embedHref:
+      'https://maps.google.com/maps?q=40490+Vista+Road,+Hemet,+CA+92544&hl=en&z=15&output=embed',
+  },
+] as const;
+
 export const siteConfig = {
   name: 'Ha Thanh Investment LLC',
   shortName: 'Ha Thanh Investment',
   tagline: 'Reliable tech repair in Hemet',
   description:
     'Computer repair, POS systems, and IT services in Hemet, California. Serving customers since 2020.',
-  phone: '714-794-0974',
-  phoneHref: 'tel:+17147940974',
-  address: '1682 E 41th St, Los Angeles, CA 90011',
-  addressMapsHref:
-    'https://www.google.com/maps/search/?api=1&query=1682+E+41th+St+Los+Angeles+CA+90011',
-  addressEmbedHref:
-    'https://maps.google.com/maps?q=1682+E+41th+St,+Los+Angeles,+CA+90011&hl=en&z=15&output=embed',
+  phone: '714-330-1736',
+  phoneHref: 'tel:+17143301736',
+  addresses,
   foundedYear: 2020,
-  location: 'Los Angeles, CA',
+  location: 'Los Angeles & Hemet, CA',
 } as const;
 
 export const navItems = [
@@ -52,8 +67,7 @@ export const aboutContent = {
     },
     {
       icon: 'map' as const,
-      value: 'Los Angeles, CA',
-      label: '1682 E 41th St',
+      addresses,
     },
     {
       icon: 'wrench' as const,
