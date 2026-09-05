@@ -7,7 +7,7 @@ Marketing site for **Ha Thanh Investment LLC**, a Hemet, California business off
 | | |
 |---|---|
 | **Location** | 40490 Vista Road, Hemet, CA 92544 |
-| **Phone** | [714-330-1736](tel:+17143301736) |
+| **Phone** | [714-794-0974](tel:+17147940974) |
 | **Focus** | POS (F&B), chip-level repair, refurbished hardware, custom assembly, small-business IT support |
 
 The site helps visitors learn about services and get in touch by phone or contact form.

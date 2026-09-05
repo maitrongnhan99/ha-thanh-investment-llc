@@ -9,7 +9,7 @@ Design a **simple, professional website** for **Ha Thanh Investment LLC**, a com
 | **Business** | Ha Thanh Investment LLC |
 | **Address** | 40490 Vista Road, Hemet, CA 92544 |
 | **In business since** | 2020 |
-| **Phone** | 714-330-1736 |
+| **Phone** | 714-794-0974 |
 
 **Primary goal:** Help customers understand the services offered and get in touch via **phone** or a **contact form**.
 
@@ -20,7 +20,7 @@ Design a **simple, professional website** for **Ha Thanh Investment LLC**, a com
 - **Style:** Minimal, trustworthy, professional
 - **Responsive:** Mobile-friendly
 - **Usability:** Easy to navigate and read
-- **Conversion focus:** Clear paths to call **714-330-1736** and submit the contact form
+- **Conversion focus:** Clear paths to call **714-794-0974** and submit the contact form
 
 ---
 
@@ -98,7 +98,7 @@ May also include:
 
 ## 6. Contact
 
-- **Phone:** 714-330-1736 (prominent, clickable on mobile)
+- **Phone:** 714-794-0974 (prominent, clickable on mobile)
 - **Address:** 40490 Vista Road, Hemet, CA 92544
 - **Contact form** for inquiries
 
@@ -117,4 +117,4 @@ These were unclear in the original notes-worth deciding before build:
 
 ## Summary
 
-Build a minimal, mobile-friendly site for Ha Thanh Investment LLC (Hemet, CA, serving customers since 2020) with About, Services, and Contact sections; strong credibility on About with two photos (hardware + team repairing); Services focused on POS, refurbished hardware, assembly, and repair, plus general IT services; primary CTA is **714-330-1736** and a contact form.
+Build a minimal, mobile-friendly site for Ha Thanh Investment LLC (Hemet, CA, serving customers since 2020) with About, Services, and Contact sections; strong credibility on About with two photos (hardware + team repairing); Services focused on POS, refurbished hardware, assembly, and repair, plus general IT services; primary CTA is **714-794-0974** and a contact form.

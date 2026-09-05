@@ -23,8 +23,8 @@ export const siteConfig = {
   tagline: 'Reliable tech repair in Hemet',
   description:
     'Computer repair, POS systems, and IT services in Hemet, California. Serving customers since 2020.',
-  phone: '714-330-1736',
-  phoneHref: 'tel:+17143301736',
+  phone: '714-794-0974',
+  phoneHref: 'tel:+17147940974',
   addresses,
   foundedYear: 2020,
   location: 'Los Angeles & Hemet, CA',
@@ -76,9 +76,9 @@ export const aboutContent = {
     },
     {
       icon: 'phone' as const,
-      value: '714-794-0974',
+      value: siteConfig.phone,
       label: 'Call for a free consultation',
-      href: 'tel:+17147940974',
+      href: siteConfig.phoneHref,
     },
   ],
   storyTitle: 'Why customers choose us',
@@ -94,7 +94,7 @@ export const aboutContent = {
       imageAlt:
         'Technician repairing a desktop computer at a local repair shop workbench',
       ctaLabel: 'Schedule a consultation',
-      ctaHref: 'tel:+17147940974',
+      ctaHref: siteConfig.phoneHref,
     },
     {
       id: 'repair',
